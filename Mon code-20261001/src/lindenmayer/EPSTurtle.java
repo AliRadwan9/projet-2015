@@ -19,13 +19,13 @@ public class EPSTurtle extends TrueTurtle {
     @Override
     public void draw() {
         super.draw();
-        out.printf(Locale.US, "%.2f %.2f lineto\n", currentState.x, currentState.y);
+        out.printf(Locale.US, "%.2f %.2f lineto\n", getPosition().getX(), getPosition().getY());
     }
 
     @Override
     public void move() {
         super.move();
-        out.printf(Locale.US, "%.2f %.2f moveto\n", currentState.x, currentState.y);
+        out.printf(Locale.US, "%.2f %.2f moveto\n", getPosition().getX(), getPosition().getY());
     }
 
     @Override
@@ -37,6 +37,6 @@ public class EPSTurtle extends TrueTurtle {
     @Override
     public void pop() {
         super.pop();
-        out.printf(Locale.US, "stroke %.2f %.2f newpath moveto\n", currentState.x, currentState.y);
+        out.printf(Locale.US, "stroke %.2f %.2f newpath moveto\n", getPosition().getX(), getPosition().getY());
     }
 }
